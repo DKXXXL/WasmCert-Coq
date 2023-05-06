@@ -6,7 +6,7 @@ From mathcomp Require Import ssreflect ssrbool ssrnat eqtype seq.
 From ITree Require Import ITree.
 From ITree Require ITreeFacts.
 From Wasm Require Import list_extra datatypes datatypes_properties
-                         interpreter binary_format_parser operations
+                         interpreter operations
                          typing opsem type_checker memory memory_list.
 From Coq Require Import BinNat.
 
