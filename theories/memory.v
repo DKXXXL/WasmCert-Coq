@@ -6,7 +6,6 @@ Require Import bytes.
 From mathcomp Require Import ssreflect ssrbool ssrfun eqtype.
 
 Module Memory.
-
 Definition mem_make_t Mem_t := byte -> N -> Mem_t.
 Definition mem_length_t Mem_t := Mem_t -> N.
 Definition mem_grow_t Mem_t := N -> Mem_t -> Mem_t.
@@ -64,6 +63,8 @@ Unset Printing Implicit Defensive.
 
 Section ClassDef.
 
+(* Not sure if this type class is useful.. 
+  Since memory_list is pretty direct and everyone uses it? *)
 Record mixin_of (Mem_t : Type) : Type := Mixin {
   mem_make : byte -> N -> Mem_t;
   mem_length : Mem_t -> N;
